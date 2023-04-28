@@ -17,6 +17,11 @@ body {
     font-family: "Red Hat Display", sans-serif;
     background-color: var(--pale-blue);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .bg__image {
@@ -31,10 +36,18 @@ body {
 }
 
 .container {
-    background-color: var(--very-pale-blue);
+    background-color: #fff;
     margin: 20px;
-    border-radius: 5px;
+    padding-bottom: 20px;
+    border-radius: 12px;
     box-shadow: 3px 3px 3px hsl(228, 45%, 44%, 0.15);
+}
+
+.container .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .container img.hero {
@@ -42,8 +55,38 @@ body {
     border-radius: 5px 5px 0 0;
 }
 
-h1 {
+.container .pricing {
+    margin: 30px auto;
+    padding: 10px;
+    background-color: var(--very-pale-blue);
+    width: 90%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.container .pricing article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container .pricing article img {
+    margin-right: 10px;
+
+}
+
+
+.container h1 {
     color: var(--dark-blue);
+    margin: 10px 0;
+}
+
+.container p.desc {
+    padding: 0 20px;
 }
 
 .btn {
@@ -71,6 +114,7 @@ p {
     background-color: var(--bright-blue);
     color: var(--very-pale-blue);
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .btn-primary:hover,
@@ -98,14 +142,6 @@ button {
     font-family: inherit;
 }
 
-@media (min-width: 768px) {
-    .bg__image {
-        background: url("./images/pattern-background-desktop.svg") no-repeat center/cover;
-        height: 50vh;
-    }
-
-}
-
 /* Attribution */
 .attribution {
     font-size: 11px;
@@ -114,4 +150,17 @@ button {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 768px) {
+    .bg__image {
+        background: url("./images/pattern-background-desktop.svg") no-repeat center/cover;
+        eight: 50vh;
+    }
+
+    .container {
+        width: 400px;
+    }
+
 }
